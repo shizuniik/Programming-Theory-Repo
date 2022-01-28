@@ -5,7 +5,8 @@ using UnityEngine;
 public class Sekiwake : Rikishi
 {
     [SerializeField] float force;
-    [SerializeField] float speed; 
+    [SerializeField] float speed;
+    [SerializeField] Vector3 startForce; 
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +27,11 @@ public class Sekiwake : Rikishi
     public override void Jump()
     {
         gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * force, ForceMode.Impulse);
+    }
+
+    public override void OpponentMove()
+    {
+        gameObject.GetComponent<Rigidbody>().AddForce(startForce, ForceMode.Impulse); 
     }
 
 }
