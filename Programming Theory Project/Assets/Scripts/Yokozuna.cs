@@ -29,9 +29,4 @@ public class Yokozuna : Rikishi  // INHERITANCE
         gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * force, ForceMode.Impulse);
     }
 
-    public override void OpponentMove()
-    {
-     
-
-    }
 }
