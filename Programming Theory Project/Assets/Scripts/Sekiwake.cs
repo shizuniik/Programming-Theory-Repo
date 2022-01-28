@@ -6,20 +6,21 @@ public class Sekiwake : Rikishi
 {
     [SerializeField] float force;
     [SerializeField] float speed;
-    [SerializeField] Vector3 startForce; 
+    [SerializeField] Vector3 startForce;
     // Start is called before the first frame update
     void Start()
     {
         this.Category = "Sekiwake";
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    public override void Attack() 
+    public override void Attack()
     {
         gameObject.GetComponent<Rigidbody>().AddForce(Vector3.forward * force , ForceMode.Impulse);
     }
@@ -29,9 +30,9 @@ public class Sekiwake : Rikishi
         gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * force, ForceMode.Impulse);
     }
 
-    public override void OpponentMove()
+    public override void EnemyMove()
     {
-        gameObject.GetComponent<Rigidbody>().AddForce(startForce, ForceMode.Impulse); 
+        gameObject.GetComponent<Rigidbody>().AddForce(startForce, ForceMode.Impulse);
     }
 
 }

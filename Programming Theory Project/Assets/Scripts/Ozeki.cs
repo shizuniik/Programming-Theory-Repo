@@ -28,10 +28,4 @@ public class Ozeki : Rikishi
     {
         
     }
-
-    public override void OpponentMove()
-    {
-       
-
-    }
 }
