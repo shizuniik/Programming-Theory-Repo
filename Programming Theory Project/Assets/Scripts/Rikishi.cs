@@ -59,17 +59,15 @@ public abstract class Rikishi : MonoBehaviour
 
     }
 
-    public virtual void OpponentMove()
-    {
-        
-    }
-
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.transform.CompareTag("Floor"))
         {
-            Debug.Log("Game over!"); 
+            
         }
     }
 
+    public virtual void EnemyMove()
+    {
+    }
 }
